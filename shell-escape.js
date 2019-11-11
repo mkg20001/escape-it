@@ -1,12 +1,12 @@
 'use strict'
 
-module.exports = shellescape
+module.exports = (platform) => (...a) => shellescape(platform, ...a)
 
 // return a shell compatible format
-function shellescape (a) {
+function shellescape (platform, ...a) {
   var ret = []
 
-  if (process.platform === 'win32') {
+  if ((platform || process.platform) === 'win32') {
     a.forEach(function (s) {
       if (/[\s\\"]/.test(s)) {
         var backslashes = 0; var c; var rep = '"'
