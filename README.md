@@ -1,4 +1,4 @@
-shell-escape
+escape-it
 ============
 
 Escape and stringify an array of arguments to be executed on the shell
@@ -6,7 +6,7 @@ Escape and stringify an array of arguments to be executed on the shell
 Install
 -------
 
-    npm install shell-escape
+    npm install escape-it
 
 Example
 -------
@@ -14,7 +14,7 @@ Example
 ### simple
 
 ``` js
-var shellescape = require('shell-escape');
+var shellescape = require('escape-it');
 
 var args = ['curl', '-v', '-H', 'Location;', '-H', 'User-Agent: dave#10', 'http://www.daveeddy.com/?name=dave&age=24'];
 
@@ -33,7 +33,7 @@ A command suitable for being executed by the shell
 ### advanced
 
 ``` js
-var shellescape = require('shell-escape');
+var shellescape = require('escape-it');
 
 var args = ['echo', 'hello!', 'how are you doing $USER', '"double"', "'single'"];
 
