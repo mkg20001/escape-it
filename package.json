@@ -1,5 +1,10 @@
 {
   "name": "escape-it",
+  "template": {
+    "extends": [
+      "node"
+    ]
+  },
   "version": "0.3.0",
   "description": "Escape and stringify an array of arguments to be executed on the shell",
   "author": [
@@ -9,7 +14,8 @@
   ],
   "main": "./index.js",
   "scripts": {
-    "test": "for f in test/*; do echo \"$f\"; node \"$f\" || exit 1; echo; done; echo Passed; exit 0"
+    "test": "mocha -A",
+    "cov": "nyc mocha"
   },
   "repository": "git://github.com/mkg20001/escape-it.git",
   "license": "MIT",
@@ -19,5 +25,10 @@
     "escape",
     "bash",
     "escapeshellarg"
-  ]
+  ],
+  "devDependencies": {
+    "mkgs-tool": "^0.1.3",
+    "mocha": "*",
+    "nyc": "*"
+  }
 }
