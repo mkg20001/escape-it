@@ -1,9 +1,11 @@
-var shellescape = require('../');
+'use strict'
 
-var assert = require('assert');
+var shellescape = require('../')
 
-var args = ['echo', 'hello!', 'how are you doing $USER', '"double"', "'single'"];
+var assert = require('assert')
 
-var escaped = shellescape(args);
-assert.strictEqual(escaped, "echo 'hello!' 'how are you doing $USER' '\"double\"' \\''single'\\'");
-console.log(escaped);
+var args = ['echo', 'hello!', 'how are you doing $USER', '"double"', "'single'"]
+
+var escaped = shellescape(args)
+assert.strictEqual(escaped, "echo 'hello!' 'how are you doing $USER' '\"double\"' \\''single'\\'")
+console.log(escaped)
