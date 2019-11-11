@@ -1,6 +1,6 @@
 {
   "name": "escape-it",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Escape and stringify an array of arguments to be executed on the shell",
   "author": [
     "Martin PANEL <martin@xorax.info> (http://xorax.info)",
@@ -14,5 +14,10 @@
   "repository": "git://github.com/mkg20001/escape-it.git",
   "license": "MIT",
   "dependencies": {},
-  "keywords": ["shell", "escape", "bash", "escapeshellarg"]
+  "keywords": [
+    "shell",
+    "escape",
+    "bash",
+    "escapeshellarg"
+  ]
 }
