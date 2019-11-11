@@ -34,7 +34,7 @@ function shellescape (a) {
     })
   } else {
     a.forEach(function (s) {
-      if (/[^A-Za-z0-9_\/:=-]/.test(s)) {
+      if (/[^A-Za-z0-9_/:=-]/.test(s)) {
         s = "'" + s.replace(/'/g, "'\\''") + "'"
         s = s.replace(/^(?:'')+/g, '') // unduplicate single-quote at the beginning
           .replace(/\\'''/g, "\\'") // remove non-escaped single-quote if there are enclosed between 2 escaped
@@ -49,7 +49,7 @@ function shellescape (a) {
 function repeat (s, n) { // mini String.prototye.repeat
   var result = ''
   while (n) {
-    if (n % 2 == 1) {
+    if (n % 2 === 1) {
       result += s
     }
     if (n > 1) {
